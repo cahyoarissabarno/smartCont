@@ -1,22 +1,3 @@
-/**
- * Use this file to configure your truffle project. It's seeded with some
- * common settings for different networks and features like migrations,
- * compilation, and testing. Uncomment the ones you need or modify
- * them to suit your project as necessary.
- *
- * More information about configuration can be found at:
- * 
- * https://trufflesuite.com/docs/truffle/reference/configuration
- *
- * To deploy via Infura you'll need a wallet provider (like @truffle/hdwallet-provider)
- * to sign your transactions before they're sent to a remote public node. Infura accounts
- * are available for free at: infura.io/register.
- *
- * You'll also need a mnemonic - the twelve word phrase the wallet uses to generate
- * public/private key pairs. If you're publishing your code to GitHub make sure you load this
- * phrase from a file you've .gitignored so it doesn't accidentally become public.
- *
- */
 
 // const HDWalletProvider = require('@truffle/hdwallet-provider');
 //
@@ -25,8 +6,8 @@
 
 const PrivateKeyProvider = require("@truffle/hdwallet-provider");
 const privateKeys = ["c87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3"];
-// const privateKeyProvider = new PrivateKeyProvider(privateKey, "http://10.9.23.7:8545", {chainId:5454});
-const privateKeyProvider = new PrivateKeyProvider({ privateKeys, providerOrUrl: "http://10.9.23.7:8545", chainId: 5454});
+const privateKeyProvider = new PrivateKeyProvider(privateKeys, "http://10.9.23.7:8545");
+// const privateKeyProvider = new PrivateKeyProvider({ privateKeys, providerOrUrl: "http://10.9.23.7:8545", chainId: 5454});
 // ({ mnemonic, providerOrUrl: 'wss://ropsten.infura.io/ws/v3/.....', chainId: 5454}),
 
 module.exports = {
@@ -42,7 +23,7 @@ module.exports = {
 
   networks: {
     // Using hyperledger Besu
-    besuWallet: {
+    besu: {
       provider: privateKeyProvider,
       network_id: "*"
       // chainId: "*",
@@ -98,7 +79,7 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      version: "0.8.15",      // Fetch exact version from solc-bin (default: truffle's version)
+      version: "0.8.11",      // 0.8.15 Fetch exact version from solc-bin (default: truffle's version)
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
       // settings: {          // See the solidity docs for advice about optimization and evmVersion
       //  optimizer: {
