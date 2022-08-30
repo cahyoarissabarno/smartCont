@@ -7,6 +7,7 @@
 const PrivateKeyProvider = require("@truffle/hdwallet-provider");
 const privateKeys = ["c87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3"];
 const privateKeyProvider = new PrivateKeyProvider(privateKeys, "http://10.9.23.7:8545");
+// const privateKeyProvider = new PrivateKeyProvider(privateKeys, "http://10.9.23.7:50051");
 // const privateKeyProvider = new PrivateKeyProvider({ privateKeys, providerOrUrl: "http://10.9.23.7:8545", chainId: 5454});
 // ({ mnemonic, providerOrUrl: 'wss://ropsten.infura.io/ws/v3/.....', chainId: 5454}),
 
@@ -25,7 +26,7 @@ module.exports = {
     // Using hyperledger Besu
     besu: {
       provider: privateKeyProvider,
-      network_id: "*"
+      network_id: "*" //5758
       // chainId: "*",
       // gas: "0x1ffffffffffffe",           // Gas sent with each transaction (default: ~6700000)
       // gasPrice: 0  // 20 gwei (in wei) (default: 100 gwei)
@@ -111,4 +112,118 @@ module.exports = {
   //     }
   //   }
   // }
+
+  // {
+  //   "config" : {
+  //     "chainId" : 5758,
+  //     "contractSizeLimit" : 2147483647,
+  //     "muirglacierblock" : 0,
+  //     "ibft2" : {
+  //       "blockperiodseconds" : 2,
+  //       "epochlength" : 30000,
+  //       "requesttimeoutseconds" : 4
+  //     }
+  //   },
+  //   "nonce" : "0x0",
+  //   "timestamp" : "0x61ad4470",
+  //   "gasLimit" : "0x1fffffffffffff",
+  //   "difficulty" : "0x1",
+  //   "mixHash" : "0x63746963616c2062797a616e74696e65206661756c7420746f6c6572616e6365",
+  //   "coinbase" : "0x0000000000000000000000000000000000000000",
+  //   "alloc" : { },
+  //   "extraData" : "0xf87ea00000000000000000000000000000000000000000000000000000000000000000f85494fd1dad14be4515920bef869c4251a1bebce64bd29440275e0df5ddb80a462f2970cde38bf93ce7ffac94762f7b23b762fff436f88b5470a1788b3bcf42be9418d067665290a604fc59fa569f1fa359568b3797808400000000c0"
+  // }
+
+  // data-path="/home/sysadmin/privateNetwork/data"
+  // genesis-file="/home/sysadmin/privateNetwork/genesis.json"
+  // network-id="5758"
+  // bootnodes=["enode://2232f5be1303386aa5be75ee8bc8d85a978c6f0fed444454b132cdea3a446d0699b49794b93615b8251e408480deec505a13cf738b403bf81710b80b2eaa4d5e@10.9.23.7:50050"]
+  // min-gas-price=0
+  
+  // p2p-host="10.9.23.7"
+  // p2p-port="50050"
+  
+  // rpc-http-enabled=true
+  // rpc-http-api=["ETH","NET","IBFT","TXPOOL","TRACE"]
+  // rpc-http-port="50051"
+  // rpc-http-host="0.0.0.0"
+  // host-allowlist=["10.9.23.7"]
+  // rpc-http-cors-origins=["all"]
+  
+  // metrics-enabled=true
+  // metrics-host="0.0.0.0"
+  // metrics-port="50052"
+  // metrics-protocol="PROMETHEUS"
+  
+
+//   data-path="data"
+// genesis-file="../genesis.json"
+// rpc-http-enabled=true
+// rpc-ws-enabled=true
+// rpc-http-api=["ETH","NET","IBFT","WEB3"]
+// rpc-ws-api=["ETH","NET","IBFT","WEB3"]
+// rpc-http-cors-origins=["all"]
+// host-allowlist=["*"]
+// p2p-host="10.9.23.7"
+// p2p-interface="10.9.23.7"
+// rpc-http-port="8545"
+// rpc-ws-port="6174"
+// rpc-http-host="0.0.0.0"
+// rpc-ws-host="0.0.0.0"
+// min-gas-price=0
+
+ 
+ 
+  // network-id="5758"
+  // bootnodes=["enode://2232f5be1303386aa5be75ee8bc8d85a978c6f0fed444454b132cdea3a446d0699b49794b93615b8251e408480deec505a13cf738b403bf81710b80b2eaa4d5e@10.9.23.7:50050"]
+
+  
+  
+  // p2p-port="50050"
+  
+  // rpc-http-enabled=true
+
+  
+  
+  // host-allowlist=["10.9.23.7"]
+  
+  
+  // metrics-enabled=true
+  // metrics-host="0.0.0.0"
+  // metrics-port="50052"
+  // metrics-protocol="PROMETHEUS"
+
+// data-path="data"  // data-path="/home/sysadmin/privateNetwork/data"
+// genesis-file="../genesis.json"  // genesis-file="/home/sysadmin/privateNetwork/genesis.json"
+// host-allowlist=["*"] // host-allowlist=["10.9.23.7"]
+// rpc-http-enabled=true  // rpc-http-enabled=true
+// rpc-http-api=["ETH","NET","IBFT","WEB3"]   // rpc-http-api=["ETH","NET","IBFT","TXPOOL","TRACE"]
+// rpc-http-cors-origins=["all"] // rpc-http-cors-origins=["all"]
+// rpc-http-port="8545" // rpc-http-port="50051"
+// rpc-http-host="0.0.0.0" // rpc-http-host="0.0.0.0"
+// p2p-host="10.9.23.7" // p2p-host="10.9.23.7"
+// p2p-interface="10.9.23.7"
+// min-gas-price=0   // min-gas-price=0
+
+// data-path="data"  
+// genesis-file="../genesis.json"  
+// host-allowlist=["10.9.23.7"]
+// rpc-http-enabled=true  
+// rpc-http-api=["ETH","NET","IBFT","TXPOOL","TRACE"]
+// rpc-http-cors-origins=["all"] 
+// rpc-http-port="8545" 
+// rpc-http-host="0.0.0.0" 
+// p2p-host="10.9.23.7" 
+// p2p-interface="10.9.23.7"
+// min-gas-price=0   
+// network-id="5454"
+
+// p2p-port="50050"
+// rpc-http-enabled=true
+// host-allowlist=["10.9.23.7"]
+// metrics-enabled=true
+// metrics-host="0.0.0.0"
+// metrics-port="50052"
+// metrics-protocol="PROMETHEUS"
+
 };
