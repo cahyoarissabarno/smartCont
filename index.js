@@ -1,10 +1,10 @@
 const Web3 = require('web3')
 const MyContract = require('./build/contracts/Counter2.json')
 
-const PrivateKeyProvider = require("@truffle/hdwallet-provider");
+// const PrivateKeyProvider = require("@truffle/hdwallet-provider");
 const privateKeys = ["0xc87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3"];
 // const privateKeyProvider = new PrivateKeyProvider(privateKey, "http://10.9.23.7:8545", {chainId:5454});
-const privateKeyProvider = new PrivateKeyProvider({ privateKeys, providerOrUrl: "http://10.9.23.7:8545", chainId: 5454});
+// const privateKeyProvider = new PrivateKeyProvider({ privateKeys, providerOrUrl: "http://10.9.23.7:8545", chainId: 5454});
 
 const web3 = new Web3('http://10.9.23.7:8545')
 // const web3 = new Web3(new Web3.providers.WebsocketProvider('ws://10.9.23.7:6174') )
